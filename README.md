@@ -6,7 +6,7 @@
 ---
 #General usage notes
 
-This code allows a probabilistic tumor segmentation based on [1]. Spatial regularisation by means of Markov random fields is not included.
+This code allows a probabilistic tumor segmentation based on [1] and [2]. Spatial regularisation by means of Markov random fields is not included.
 		
 ##Install
 
