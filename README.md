@@ -91,4 +91,5 @@ Bugs, problems or questions can be adressed at:
 
 ---
 
-[1] Menze BH, Van Leemput K, Lashkari D, Weber M-A, Ayache N, Golland P. A Generative Model for Brain Tumor Segmentation in Multi-Modal Images. Medical image computing and computer-assisted intervention : International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI) 2010;13(Pt 2):151-159.
+[1] [Menze BH, Van Leemput K, Lashkari D, Weber M-A, Ayache N, Golland P. A Generative Model for Brain Tumor Segmentation in Multi-Modal Images. Medical image computing and computer-assisted intervention : International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI) 2010; 13(Pt 2) : pp. 151-159.](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3050038/)  
+[2] [Menze BH, Van Leemput K, Lashkari D, et al. A Generative Probabilistic Model and Discriminative Extensions for Brain Lesion Segmentation - With Application to Tumor and Stroke. IEEE Transactions on Medical Imaging; vol. 35, no. 4, pp. 933-946, April 2016.](http://dx.doi.org/10.1109/TMI.2015.2502596)
