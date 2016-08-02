@@ -30,20 +30,20 @@ def arrange_files():
     brats_dir = os.path.join(data_dir,
                              'preprocessed_data')
     def in_brats_dir(filename):
-        """Get full path of brats filenames."""
+        """Get full path of image_files filenames."""
         return os.path.join(brats_dir,
                             filename)
-    brats = {}
+    image_files = {}
     filename = 'VSD.Brain.XX.O.MR_Flair.703.nii'
-    brats[mr.FLAIR] = in_brats_dir(filename)
+    image_files[mr.FLAIR] = in_brats_dir(filename)
     filename = 'VSD.Brain.XX.O.MR_Flair.703_mask.nii'
     brats_flair_mask = in_brats_dir(filename)
     filename = 'VSD.Brain.XX.O.MR_T1.704.nii'
-    brats[mr.T1] = in_brats_dir(filename)
+    image_files[mr.T1] = in_brats_dir(filename)
     filename = 'VSD.Brain.XX.O.MR_T1c.705.nii'
-    brats[mr.T1C] = in_brats_dir(filename)
+    image_files[mr.T1C] = in_brats_dir(filename)
     filename = 'VSD.Brain.XX.O.MR_T2.706.nii'
-    brats[mr.T2] = in_brats_dir(filename)
+    image_files[mr.T2] = in_brats_dir(filename)
 
     # Specify filenames of GM, WM and CSF atlas maps registered to image data
     atlas_dir = os.path.join(data_dir,
@@ -60,10 +60,12 @@ def arrange_files():
     # Store paths in variables
     # You can fill in your own filenames, but make sure all images
     # are in the same reference space with the same pixel dimensions
-    hyper_files = {mod : brats[mod]
-                   for mod in mr.HYPER_MODALITIES}
-    hypo_files = {mod : brats[mod]
-                  for mod in mr.HYPO_MODALITIES}
+    hyper_files = {mod : image_files[mod]
+                   for mod in mr.HYPER_MODALITIES \
+                   if mod in image_files}
+    hypo_files = {mod : image_files[mod]
+                  for mod in mr.HYPO_MODALITIES \
+                  if mod in image_files}
     mask_file = brats_flair_mask
     atlas_files = {tissue  : atlas[tissue]
                    for tissue in ei.TISSUES}

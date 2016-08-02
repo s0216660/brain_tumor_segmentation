@@ -24,7 +24,11 @@ to complete the installation.
 ```
 python main.py
 ```
-  * To use another dataset:  
+  * To use another dataset - in `main.py` set:   
+    1. Path(s) to T1, T1c, T2 and/or FLAIR images in the `image_files` dictionary. Supply at least one path, at most all four paths. The algorithm will look for hypointense tumors in T1 and for hyperintense tumors in T1c, T2 and FLAIR.
+    2. Paths to wm, gm and csf atlas files in the `atlas` dictionary. Please supply all three of the atlas files.
+    3. Path to a brain mask in `brats_flair_mask`, optional, can be set to None.
+    3. Path to store results in `save_dir`, optional, can be set to None.
 __Make sure that all your images, mask(s) and atlas maps (GM, WM and CSF) are in the same reference space and have the same resolution and dimension__!
 
 ##Results
